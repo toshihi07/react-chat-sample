@@ -41,7 +41,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn() {
+//app.jsから渡されたsetNameを引数に指定して受け取ることで、signup.jsで使えるようにする
+//setNameをどこで発火されるのかを考えてみる。「はじめる」を押した時に発火させる。
+export default function SignIn( { setName } ) {
   const classes = useStyles();
 
   return (
