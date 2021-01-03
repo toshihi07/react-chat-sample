@@ -73,6 +73,13 @@ useEffect(() =>{
             // autoComplete="email"
             autoFocus
             onChange={(e) => setString(e.target.value)}
+            onKeyDown= {(e) => {
+              if(e.key === "Enter") {
+                setName(e.target.value)
+                e.preventDefault();
+              }
+         }
+          }
           />
           <Button
             type="button"
