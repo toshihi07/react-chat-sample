@@ -1,7 +1,19 @@
 import React from 'react'
+import { makeStyles } from '@material-ui/core/styles';
 
-const messageList = () =>{
-return <div>messageList</div>
+
+const useStyles = makeStyles({
+  root: {
+    gridRow: 1,
+  },
+})
+
+
+const MessageList = () =>{
+  //useStyllesを実行してスタイルを取得。
+  const classes = useStyles();
+
+return <div className={classes.root} >messageList</div>
 }
 
-export default messageList;
+export default MessageList;
