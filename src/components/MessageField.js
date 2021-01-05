@@ -1,8 +1,9 @@
 import React,{ useEffect,useState } from 'react'
 import { TextField } from "@material-ui/core";
 
+import {pushMessage} from '../firebase.js'
+
 const MessageField  = ({name,setText,text}) =>{
-  console.log({ text })
   const [isComposed,setIsComposed] = useState(false);
   
 return <TextField
@@ -15,6 +16,8 @@ return <TextField
       return
     }
     if(e.key === "Enter") {
+      //無理やり名前を入れてしまうのをはハードコーディングという
+      pushMessage({name: "ハムさん",text})
       console.log('push message to firebase')
       setText("")
       e.preventDefault();
