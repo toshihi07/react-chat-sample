@@ -7,7 +7,6 @@ const useStyles = makeStyles({
   },
 })
 
-
 const MessageList = () =>{
   //useStyllesを実行してスタイルを取得。
   const classes = useStyles();
