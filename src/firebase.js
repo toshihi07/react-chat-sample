@@ -1,15 +1,24 @@
 // firebaseをimport
 import firebase from 'firebase'
 
+const  {
+  REACT_APP_FIREBASE_API_KEY ,
+  REACT_APP_FIREBASE_AUTH_DOMAIN ,
+  REACT_APP_FIREBASE_DATABASE_URL ,
+  REACT_APP_FIREBASE_PROJECT_ID ,
+  REACT_APP_FIREBASE_STORAGE_BUCKET,
+  REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  REACT_APP_FIREBASE_APP_ID 
+} = process.env;
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB1r3-eGL5MOvBgtpzAgir-aRoo0l3NkXg",
-  authDomain: "react-chat-sample-4d82f.firebaseapp.com",
-  databaseURL: "https://react-chat-sample-4d82f-default-rtdb.firebaseio.com",
-  projectId: "react-chat-sample-4d82f",
-  storageBucket: "react-chat-sample-4d82f.appspot.com",
-  messagingSenderId: "618913037610",
-  appId: "1:618913037610:web:716e3ae19ac1caf2dbf253"
+  apiKey: REACT_APP_FIREBASE_API_KEY,
+  authDomain: REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: REACT_APP_FIREBASE_PROJECT_ID ,
+  storageBucket: REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: REACT_APP_FIREBASE_APP_ID 
 };
 
 //initialize(初期化)
