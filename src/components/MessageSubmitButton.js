@@ -7,7 +7,7 @@ const MessageSubmitButton = ({name,text,setText,inputEl}) => {
 return <IconButton 
   disabled={text === ""}
   onClick = {() => {
-    pushMessage({name: "ハムさん",text})
+    pushMessage({name,text})
     setText("");
     inputEl.current.focus();
   }

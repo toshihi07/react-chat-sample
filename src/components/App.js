@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Signin from "./Signin";
 import Main from './main'
 import config from '../config.json'
-console.log(config)
 
 // export default () => {}。functiojnを省略している
 export default () => {

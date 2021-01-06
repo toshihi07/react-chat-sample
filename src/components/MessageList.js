@@ -46,17 +46,20 @@ const MessageList = () => {
   );
   //useStyllesを実行してスタイルを取得。
   const classes = useStyles();
+  const length = messages.length;
   // Attach an asynchronous callback to read the data at our posts reference
   // orderByKeyを用いることで取得する順序を指定できる
   // key:-MQKVnkAFAQT0BEHPjHT: value:{name: "ハムさん", text: "aaaa"}
   // snapshot.val()は配列オブジェクト
   // 他人にもわかりやすいようにコードを書くようにすること
   // コンポーネントがマウントされる際に一度だけ処理を実行するuseEffectを使わないと、無限ループに陥る。
-
   return (
     <List className={classes.root}>
-      {messages.map(({ key, name, text }) => {
-        return <MessageItem key={key} name={name} text={text}>item</MessageItem>;
+      {messages.map(({ key, name, text }, index) => {
+        console.log(length)
+        console.log(index)
+        const isLastItem = length === index + 1;
+        return <MessageItem key={key} name={name} text={text} isLastItem={isLastItem}/>;
       })}
     </List>
   );

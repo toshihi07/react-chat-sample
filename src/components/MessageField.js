@@ -17,7 +17,7 @@ return <TextField
     }
     if(e.key === "Enter") {
       //無理やり名前を入れてしまうのをはハードコーディングという
-      pushMessage({name: "ハムさん",text})
+      pushMessage({name,text})
       console.log('push message to firebase')
       setText("")
       e.preventDefault();
