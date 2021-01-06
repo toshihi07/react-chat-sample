@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React,{ useState,useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 //Gridはcoreから呼び出す
 import { Grid, Avatar, Button } from "@material-ui/core";
@@ -20,6 +20,7 @@ const MessageListInputField = ({ name }) => {
   //textを管理するのはmessageInputField。なぜなら、ボタンを押した時にfirebaseに保存するから。
   const [text,setText] = useState("");
   console.log(text)
+  const inputEl= useRef(null)
 
   return (
     <div className={classes.root}>
@@ -28,10 +29,10 @@ const MessageListInputField = ({ name }) => {
           <Avatar src={avatarPath}/>
         </Grid>
         <Grid item xs={10} click >
-          <MessageField name={name} setText={setText} text={text}/>
+          <MessageField name={name} setText={setText} text={text} inputEl={inputEl}/>
         </Grid>
         <Grid item xs={1}>
-          <MessageSubmitButton name={name} text={text} setText={setText}/>
+          <MessageSubmitButton name={name} text={text} setText={setText} inputEl={inputEl}/>
         </Grid>
       </Grid>
     </div>

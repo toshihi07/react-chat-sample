@@ -3,7 +3,7 @@ import { TextField } from "@material-ui/core";
 
 import {pushMessage} from '../firebase.js'
 
-const MessageField  = ({name,setText,text}) =>{
+const MessageField  = ({name,setText,text,inputEl}) =>{
   const [isComposed,setIsComposed] = useState(false);
   
 return <TextField
@@ -32,6 +32,7 @@ onCompositionEnd = {
 }
 //この一行で初期化出来る
 value={text}
+inputRef={inputEl}
   />
 }
 
