@@ -1,7 +1,7 @@
 import React,{ useState,useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 //Gridはcoreから呼び出す
-import { Grid, Avatar, Button } from "@material-ui/core";
+import { Grid, Avatar } from "@material-ui/core";
 import { gravatarPath } from '../gravatar';
 import MessageField from './MessageField'
 import MessageSubmitButton from './MessageSubmitButton'
