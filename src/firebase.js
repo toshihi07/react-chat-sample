@@ -27,7 +27,7 @@ firebase.initializeApp(firebaseConfig);
 // Get a reference to the database service
 const database = firebase.database();
 //databaseの中の特定の名前空間に対するreference(参照)を作成。
-const messagesRef = database.ref("messages");
+export const messagesRef = database.ref("messages");
 //関数の作成
 export const pushMessage = ({name,text}) => messagesRef.push({
   name,
